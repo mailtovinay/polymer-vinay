@@ -1,0 +1,47 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!--
+`<demo>` is Description
+
+@element demo
+-->
+<dom-module id="demo-element">
+    <template>
+        <style>
+            :host {
+                display: block
+            }
+        </style>
+
+        <h1>Vinay demo app</h1>
+
+    </template>
+
+    <script>
+        class demoElement extends Polymer.Element {
+
+            static get is() { return 'demo-element'; }
+
+            static get properties() {
+                return {
+                    
+                };
+            }
+
+            constructor() {
+                super();
+            }
+
+            ready() {
+                super.ready();
+
+                Polymer.RenderStatus.afterNextRender(this, function() {
+                    
+                });
+            }
+
+        }
+
+        window.customElements.define(demoElement.is, demoElement);
+    </script>
+</dom-module>
